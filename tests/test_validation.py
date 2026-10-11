@@ -25,7 +25,7 @@ def test_no_predicted_positives(sample,config):
 
 def test_invalid_probabilities(sample,config):
     for value in [1.2,-.1,float("nan"),float("inf"),"oops"]:
-        d=sample.copy();d.loc[0,"p"]=value
+        d=sample.copy();d["p"]=d["p"].astype(object);d.loc[0,"p"]=value
         with pytest.raises(AuditError):MedxFair(config).run(d)
 
 def test_budget_ties():
