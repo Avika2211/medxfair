@@ -1,0 +1,2 @@
+Release approved by the project owner: MedxFair v0.4.0.
+This one-time marker triggers PyPI Trusted Publishing.
