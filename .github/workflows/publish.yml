@@ -1,9 +1,6 @@
 name: Publish to PyPI
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/release/approved-v0.4.0.txt'
 jobs:
   build:
     runs-on: ubuntu-latest
